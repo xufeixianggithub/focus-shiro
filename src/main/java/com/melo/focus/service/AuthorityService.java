@@ -10,7 +10,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.melo.focus.domain.basic.Authority;
 import com.melo.focus.domain.extend.AuthorityController;
-import com.melo.focus.domain.vm.AuthoritySaveVM;
+import com.melo.focus.domain.vm.AuthoritySaveReq;
 import com.melo.focus.domain.vm.AuthorityUpdateVM;
 import com.melo.focus.domain.vm.AuthorityVMS;
 import com.melo.focus.mapper.basic.AuthorityMapper;
@@ -57,9 +57,9 @@ public class AuthorityService {
 	}
 
 
-	public void saveAuthority(AuthoritySaveVM authoritySaveVM) {
-		Asserts.validate(authoritySaveVM,"authoritySaveVM");
-		Authority authority = EntityUtils.entity2VM(authoritySaveVM, Authority.class);
+	public void saveAuthority(AuthoritySaveReq authoritySaveReq) {
+		Asserts.validate(authoritySaveReq,"authoritySaveReq");
+		Authority authority = EntityUtils.entity2VM(authoritySaveReq, Authority.class);
 		authority.setId(UUID.randomUUID().toString());
 		authorityMapper.insert(authority);
 	}

@@ -159,6 +159,8 @@ public class ResourceService {
 	 * @return
 	 */
 	public List<ResourceVM> getCurrentUserResourceTree() {
+
+		Object object=SecurityUtils.getSubject().getPrincipal();
 		
 		User user = (User)SecurityUtils.getSubject().getPrincipal();
 		String userId=user.getId();

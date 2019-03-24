@@ -1,5 +1,6 @@
 package com.melo.focus.controller;
 
+import com.melo.focus.domain.vm.AuthoritySaveReq;
 import io.swagger.annotations.ApiImplicitParam;
 import io.swagger.annotations.ApiImplicitParams;
 import io.swagger.annotations.ApiOperation;
@@ -19,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.melo.focus.domain.basic.Authority;
-import com.melo.focus.domain.vm.AuthoritySaveVM;
 import com.melo.focus.domain.vm.AuthorityUpdateVM;
 import com.melo.focus.domain.vm.AuthorityVMS;
 import com.melo.focus.service.AuthorityService;
@@ -66,8 +66,8 @@ public class AuthorityController {
 	@ApiResponses(value = { @ApiResponse(code = 200, message = "Success") })
 	@RequiresPermissions(value={"authority_saveAuthority","administrator"},logical=Logical.OR)
 	@RequestMapping(value="/authority",method=RequestMethod.POST)
-	public Message<String> saveAuthority(@RequestBody AuthoritySaveVM authoritySaveVM){
-		authorityService.saveAuthority(authoritySaveVM);
+	public Message<String> saveAuthority(@RequestBody AuthoritySaveReq authoritySaveReq){
+		authorityService.saveAuthority(authoritySaveReq);
 		return Message.ok(Constants.SUCCESS);
 	}
 	
