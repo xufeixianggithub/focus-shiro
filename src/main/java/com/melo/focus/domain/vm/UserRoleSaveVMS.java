@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModel;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@ApiModel("批量新增用户角色关系VM")
+@ApiModel("批量新增用户角色关系")
 public class UserRoleSaveVMS {
 
 	@NotBlank

@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 import org.hibernate.validator.constraints.Length;
 import org.hibernate.validator.constraints.NotBlank;
 
-@ApiModel("角色修改VM")
+@ApiModel("角色修改")
 public class RoleUpdateVM {
 	@NotBlank
 	private String id;

@@ -4,7 +4,7 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 import org.hibernate.validator.constraints.NotBlank;
-@ApiModel("修改用户VM")
+@ApiModel("修改用户")
 public class UserUpdateVM {
 	
 	@ApiModelProperty(value = "id")

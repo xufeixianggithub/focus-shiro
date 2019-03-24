@@ -7,7 +7,7 @@ import org.hibernate.validator.constraints.NotBlank;
 
 
 
-@ApiModel("新增用户VM")
+@ApiModel("新增用户")
 public class UserSaveVM {
 	
 	@ApiModelProperty(value = "用户登录名")

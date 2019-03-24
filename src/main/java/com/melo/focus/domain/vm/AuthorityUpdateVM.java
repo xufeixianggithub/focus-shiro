@@ -5,7 +5,7 @@ import io.swagger.annotations.ApiModelProperty;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@ApiModel("修改权限VM")
+@ApiModel("修改权限")
 public class AuthorityUpdateVM {
 	
 	@NotBlank

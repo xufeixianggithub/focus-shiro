@@ -3,7 +3,7 @@ package com.melo.focus.domain.vm;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
-@ApiModel("新增用户角色关系VM")
+@ApiModel("新增用户角色关系")
 public class UserRoleSaveVM {
 	
 	@ApiModelProperty(value = "用户id")

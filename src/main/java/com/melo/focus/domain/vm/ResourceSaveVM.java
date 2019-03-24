@@ -9,7 +9,7 @@ import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
 
-@ApiModel(value="新增资源vm")
+@ApiModel(value="新增资源")
 public class ResourceSaveVM {
 	
 	@ApiModelProperty(value="资源名")

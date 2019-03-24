@@ -8,7 +8,7 @@ import javax.validation.constraints.Min;
 import javax.validation.constraints.NotNull;
 
 import org.hibernate.validator.constraints.NotBlank;
-@ApiModel("修改资源VM")
+@ApiModel("修改资源")
 public class ResourceUpdateVM {
 	@NotBlank
 	private String id;
